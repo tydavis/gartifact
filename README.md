@@ -1,6 +1,7 @@
 # gartifact
 
-Golang artifact frontend for Java (Maven, Gradle), NPM, Docker, and Python
+Golang artifact frontend for Java (Maven, Gradle), NPM, Docker, and Python,
+backed by s3 and other cloud-storage systems.
 
 ## Purpose
 
@@ -17,6 +18,15 @@ Why use gartifact instead of Nexus or Artifactory?
 - gartifact is a single binary
 - gartifact uses a single configuration file
 - gartifact has no database or system state
-- gartifact is built to be highly concurrent 
+- gartifact is designed to operate in a high-availability/multi-node state
 - gartifact can be deployed on anything which is an available Go compiler target
+- gartifact operates under the least-privilege model
+
+## To install
+
+Get the latest releases for your platform or:
+
+```bash
+go get -u github.com/tydavis/gartifact/cmd/gartifact
+```
 
