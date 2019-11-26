@@ -1,0 +1,28 @@
+strict digraph G {
+  // With `dot`/graphviz installed, generate a png with
+  // dot -Tpng diagram.gv > diagram.png 
+  {
+    bgcolor="transparent"
+    node [shape=box]
+    gartifact [shape=doublecircle]
+  }
+  
+  "maven/gradle client" -> gartifact
+  "npm client" -> gartifact
+  "docker client" -> gartifact
+  "pypi client" -> gartifact
+  
+  gartifact -> S3
+  gartifact -> GCS
+  gartifact -> filestore
+  
+  S3 -> directory
+  GCS -> directory
+  filestore -> directory
+  
+  directory -> "metadata-index"
+  directory -> "file-object"
+  directory -> "logging"
+
+  gartifact -> gartifact  [label="node read cache"]
+}

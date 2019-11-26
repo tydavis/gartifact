@@ -11,6 +11,14 @@ state, no local database, only files in the backing store.  This means gartifact
 will continue scaling as long as the backing store contiues to take the
 appropriate connection load. 
 
+## To install
+
+Get the latest releases for your platform or:
+
+```bash
+go get -u github.com/tydavis/gartifact/cmd/gartifact
+```
+
 ## Why not X instead
 
 Why use gartifact instead of Nexus or Artifactory? 
@@ -22,11 +30,7 @@ Why use gartifact instead of Nexus or Artifactory?
 - gartifact can be deployed on anything which is an available Go compiler target
 - gartifact operates under the least-privilege model
 
-## To install
 
-Get the latest releases for your platform or:
+## Design
 
-```bash
-go get -u github.com/tydavis/gartifact/cmd/gartifact
-```
 
